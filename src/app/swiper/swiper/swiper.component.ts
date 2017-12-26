@@ -3,6 +3,8 @@ import {
   ElementRef, ChangeDetectorRef, AfterViewChecked, AfterViewInit
 } from '@angular/core';
 
+declare var Swiper: any;
+
 @Component({
   selector: 'swiper',
   templateUrl: './swiper.component.html',
@@ -10,12 +12,12 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SwiperComponent implements AfterViewChecked, AfterViewInit {
-  @Input() config: SwiperOptions;
+  @Input() config: any;
   @Input('initialize') set initialize(value: boolean) {
     this.shouldInitialize = this.initialized ? false : value;
   }
 
-  swiper: Swiper;
+  swiper: any;
 
   private swiperWrapper: any;
   private slideCount = 0;
