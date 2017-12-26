@@ -1,16 +1,33 @@
 {
   "name": "ngx-useful-swiper",
-  "version": "0.0.0",
+  "description": "Use iDangero.us's Swiper in Angular.",
+  "version": "0.0.5-alpha",
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "author": "JayChase",
+  "keywords": [
+    "Angular",
+    "swiper",
+    "slider",
+    "carousel"
+  ],
+  "private": false,
+  "main": "./lib/swipert.module.js",
+  "typings": "./lib/swiper.module.d.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "inline-build-templates": "gulp inline-build-templates",
+    "ngc-build": "ngc -p ./tsconfig.lib.json",
+    "cleardown": "rimraf build lib",
+    "prepare": "npm run cleardown && npm run inline-build-templates && npm run ngc-build"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^5.1.0",
     "@angular/cdk": "^5.0.0",
@@ -32,10 +49,13 @@
     "@angular/cli": "1.6.1",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
+    "@types/core-js": "^0.9.43",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.1.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -45,8 +65,16 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "rimraf": "^2.6.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaychase/ngx-useful-swiper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jaychase/ngx-useful-swiper/issues"
   }
 }

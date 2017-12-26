@@ -1,5 +1,7 @@
 ## ngx-useful-swiper
 
+**this is not quite ready yet but feel free to have a look**
+
 Use iDangero.us's great slider (version 4) [Swiper](http://idangero.us/swiper/#.V9C3w4VOLaI) in Angular.
 
 Note this package does not yet support Swiper version 4 so be sure to user v3.4.2.
