@@ -1,7 +1,7 @@
 {
   "name": "ngx-useful-swiper",
   "description": "Use iDangero.us's Swiper in Angular.",
-  "version": "0.0.5-alpha",
+  "version": "0.0.6-alpha",
   "license": "MIT",
   "files": [
     "lib"
