@@ -14,7 +14,7 @@
     "carousel"
   ],
   "private": false,
-  "main": "./lib/swipert.module.js",
+  "main": "./lib/swiper.module.js",
   "typings": "./lib/swiper.module.d.ts",
   "scripts": {
     "ng": "ng",
