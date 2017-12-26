@@ -19,9 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/swiper/dist/css/swiper.css"        
+      ],    
+      "scripts": [
+        "../node_modules/swiper/dist/js/swiper.js"
       ],
-      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
