@@ -1,7 +1,7 @@
 {
   "name": "ngx-useful-swiper",
   "description": "Use iDangero.us's Swiper in Angular.",
-  "version": "0.2.0-beta",
+  "version": "0.3.0-beta",
   "license": "MIT",
   "files": [
     "lib"
@@ -31,7 +31,8 @@
   "peerDependencies": {
     "@angular/core": ">=5.0.0"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@angular/animations": "^5.1.0",
     "@angular/cdk": "^5.0.0",
     "@angular/common": "^5.0.0",
@@ -46,9 +47,7 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.5.2",
     "swiper": "^4.0.7",
-    "zone.js": "^0.8.14"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.14",
     "@angular/cli": "1.6.3",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
