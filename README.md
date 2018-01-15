@@ -2,7 +2,7 @@
 
 **this is not quite ready yet but feel free to have a look**
 
-Use iDangero.us's great slider (version 4) [Swiper](http://idangero.us/swiper/#.V9C3w4VOLaI) in Angular.
+Use iDangero.us's great slider version 4+ [Swiper](http://idangero.us/swiper/#.V9C3w4VOLaI) in Angular.
 
 Note this package does not yet support Swiper version 4 so be sure to user v3.4.2.
 
@@ -132,13 +132,19 @@ Set the config for the swiper in you component and bind it to the component conf
 ```javascript
 export class MyComponent implements OnInit {
 
-    config: SwiperOptions = {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 30
-        };
+    config: any = {
+        pagination: {
+        el: '.swiper-pagination',
+        },
+        paginationClickable: true,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        spaceBetween: 30
+    };
+
+}
 ```
 
 Set the height and width of the component. It can be targeted by its name ##swiper##
