@@ -1,7 +1,8 @@
 import {
   Component, OnInit, ChangeDetectionStrategy, Input,
-  ElementRef, ChangeDetectorRef, AfterViewChecked, AfterViewInit
+  ElementRef, ChangeDetectorRef, AfterViewChecked, AfterViewInit, PLATFORM_ID, Inject
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 declare var Swiper: any;
 
@@ -24,7 +25,11 @@ export class SwiperComponent implements AfterViewChecked, AfterViewInit {
   private initialized = false;
   private shouldInitialize = true;
 
-  constructor(private elementRef: ElementRef, private changeDetectorRef: ChangeDetectorRef) { }
+  constructor(
+    private elementRef: ElementRef,
+    private changeDetectorRef: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) public platform_id: any
+  ) { }
 
   ngAfterViewInit() {
     if (this.shouldInitialize) {
@@ -34,8 +39,7 @@ export class SwiperComponent implements AfterViewChecked, AfterViewInit {
 
   setup() {
     if (!this.swiper) {
-      // if rendered on server querySelector is undefined
-      if (this.elementRef.nativeElement.querySelector) {
+      if (isPlatformBrowser(this.platform_id)) {
         this.swiperWrapper = this.elementRef.nativeElement.querySelector('.swiper-wrapper');
         this.slideCount = this.swiperWrapper.childElementCount;
         this.swiper = new Swiper(this.elementRef.nativeElement.querySelector('swiper > div'), this.config);

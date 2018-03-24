@@ -2,6 +2,7 @@ import { ElementRef, ChangeDetectorRef, AfterViewChecked, AfterViewInit } from '
 export declare class SwiperComponent implements AfterViewChecked, AfterViewInit {
     private elementRef;
     private changeDetectorRef;
+    platform_id: any;
     config: any;
     initialize: boolean;
     swiper: any;
@@ -9,7 +10,7 @@ export declare class SwiperComponent implements AfterViewChecked, AfterViewInit 
     private slideCount;
     private initialized;
     private shouldInitialize;
-    constructor(elementRef: ElementRef, changeDetectorRef: ChangeDetectorRef);
+    constructor(elementRef: ElementRef, changeDetectorRef: ChangeDetectorRef, platform_id: any);
     ngAfterViewInit(): void;
     setup(): void;
     ngAfterViewChecked(): void;
